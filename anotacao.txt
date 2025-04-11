@@ -4,3 +4,38 @@ https://nodejs.org/en
 
 node -v 
 npm -v  
+
+=============================================================
+CRIAR UMA APLICAÇÃO NODE PELO TERMINAL UTILIZANDO NPM
+=============================================================
+
+1. Cria uma nova pasta para tua aplicação (se ainda não tiveres):
+    mkdir minha-app
+
+2. Inicializa o `package.json`:
+    npm init
+
+    Vai-te fazer algumas perguntas (nome, versão, entry point, etc). 
+    Se quiseres pular tudo e aceitar os valores padrão:
+        npm init -y
+
+3. Cria o ficheiro principal (por padrão é `index.js`):
+    touch index.js
+
+4. Escreve o teu código dentro do `index.js`:
+    Exemplo básico:
+
+        console.log("Hello, Node.js!");
+
+5. Corre a tua aplicação:
+    node index.js
+
+6. (Opcional) Adiciona um script de start ao `package.json`:
+    Edita o `package.json` e em `"scripts"` adiciona:
+
+    "scripts": {
+        "start": "node index.js"
+    }
+
+Aí depois só precisas correr:
+    npm start
