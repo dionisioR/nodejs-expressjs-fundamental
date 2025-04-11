@@ -5,6 +5,9 @@ https://nodejs.org/en
 node -v 
 npm -v  
 
+https://www.npmjs.com/
+
+
 =============================================================
 CRIAR UMA APLICAÇÃO NODE PELO TERMINAL UTILIZANDO NPM
 =============================================================
@@ -39,3 +42,24 @@ CRIAR UMA APLICAÇÃO NODE PELO TERMINAL UTILIZANDO NPM
 
 Aí depois só precisas correr:
     npm start
+
+
+========================================================
+NODEMON
+========================================================
+
+https://www.npmjs.com/package/nodemon
+npm install -g nodemon [instalação global]
+
+nodemon watch nome_do_arquivo.js
+
+
+
+
+========================================================
+EXPRESSJS
+========================================================
+
+https://expressjs.com/
+$ npm install express
+$ npm install express --save
