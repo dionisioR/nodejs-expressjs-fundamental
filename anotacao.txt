@@ -7,6 +7,12 @@ npm -v
 
 https://www.npmjs.com/
 
+[NODEMON] https://www.npmjs.com/package/nodemon
+[EXPRESS] https://expressjs.com/
+[MORGAN] https://www.npmjs.com/package/morgan   <<< HTTP request logger middleware for node.js
+
+
+
 
 =============================================================
 CRIAR UMA APLICAÇÃO NODE PELO TERMINAL UTILIZANDO NPM
@@ -63,3 +69,11 @@ EXPRESSJS
 https://expressjs.com/
 $ npm install express
 $ npm install express --save
+
+
+========================================================
+[MORGAN] https://www.npmjs.com/package/morgan   
+========================================================
+
+<<< HTTP request logger middleware for node.js
+    npm i morgan
