@@ -153,6 +153,44 @@ app.post("/tasks/create", (req, res)=>{
     })
 })
 //-------------------------------------------------------------------
+// update task - put
+app.put("/tasks/:id/update", (req, res)=>{
+    const id = req.params.id
+    const post_data = req.body
+
+    // check if data is empty
+    if(post_data == undefined){
+        res.json(functions.response('warning', 'Empty data', 0, null))
+        return
+    }
+
+    // check if data is valid
+    if(post_data.task == undefined || post_data.status == undefined){
+        res.json(functions.response('warning', 'Invalid data', 0, null))
+        return
+    }
+
+    // get data from request body
+    const task = post_data.task
+    const status = post_data.status
+
+    const query = 'update tasks set task = ?, status = ?, updated_at = now() where id = ?'
+    
+    connection.query(query, [task, status, id], (err, rows)=>{
+        if(!err){
+
+            if(rows.affectedRows > 0){
+                res.json(functions.response('success', 'Task updated', rows.affectedRows, null))
+            }else{
+                res.json(functions.response('warning', 'Task not found', 0, null))
+            }
+
+        }else{
+            res.json(functions.response('error', err.message, 0, null))
+        }
+    })
+})
+//-------------------------------------------------------------------
 // rota inexistente
 app.use((req, res)=>{
     res.json(functions.response('warning', 'Route not found', 0, null))
